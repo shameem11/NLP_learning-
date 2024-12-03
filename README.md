@@ -115,5 +115,56 @@ Word to Vector (or Word Embedding) is a technique in natural language processing
 2. word 2 vec
 
 
+# Bag of words
+ Bag of Words (BoW) model is a simple yet powerful technique in natural language processing (NLP) for converting text into numerical data. It creates a vocabulary of unique words from a collection of documents and represents each document as a vector of word counts or occurrences. The model ignores grammar, word order, and context, focusing only on the frequency of words.
 
+example:-
+
+    "I love programming.",
+    "Programming is fun.",
+    "I love coding and programming
+
+
+    {'love': 3, 'programming': 5, 'is': 2, 'fun': 1, 'coding': 0, 'and': 4}
+
+Bay of words
+
+[[0 0 0 1 0 1]
+ [0 1 1 0 0 1]
+ [1 0 0 1 1 1]]
+
+Advantages:
+
+Simplicity:
+Easy to understand and implement.
+
+Effectiveness for Text Classification:
+Works well for tasks like spam detection, sentiment analysis, or topic modeling.
+
+No Domain Expertise Needed:
+Relies purely on word frequencies; no advanced linguistic knowledge is required.
+
+Versatility:
+Can be used as a baseline for more complex NLP models.
+
+Disadvantages:
+
+Ignores Word Order:
+BoW does not consider the sequence of words, losing contextual and semantic meaning (e.g., "not good" vs. "good").
+
+High Dimensionality:
+Large vocabularies can result in high-dimensional, sparse vectors, which are computationally expensive.
+
+Fails to Capture Semantic Meaning:
+Words with similar meanings are treated independently (e.g., "happy" and "joy" are not related in BoW).
+
+Overrepresentation of Frequent Words:
+Common but less meaningful words (e.g., "the," "is") may dominate unless techniques like TF-IDF are applied.
+
+Data Dependency:
+Adding new documents can require recalculating the vocabulary and representation.
+
+# n-grams
+
+N-grams are a concept in natural language processing (NLP) that represent contiguous sequences of words or characters from a given text. They are commonly used to capture context and relationships between words that the Bag of Words model alone cannot
 
